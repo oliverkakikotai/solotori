@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italiana&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="bea">
+      <div class="logo">
+        <img src="img/logo.png" alt="logo" width="105px" height="93px" />
+      </div>
+      <div class="street">
+        <div class="foreplay">
+          <img src="img/people.png" alt="people" width="376px" height="622px" />
+        </div>
+        <div class="back">
+          <img src="img/machi.png" alt="bae" width="376px" height="622px" />
+        </div>
+        <div class="bob"><p>happy</p></div>
+        <div class="pop"><p>weekend!</p></div>
+        <div class="aoa"><p>この辺り初めて</p></div>
+      </div>
+      <div class="catchcopy">
+        <div class="catch h1">
+          <h1>TOKYO<br />AREA<br /></h1>
+        </div>
+        <div class="catch2 h1"><h1>23</h1></div>
+      </div>
+    </div>
+    <div class="mannga">
+      <div class="m1 m">
+        <h3>困るなぁ</h3>
+        <img src="img/mannga1.jpg" alt="mannga" width="250px" height="374px" />
+      </div>
+      <div class="m2">
+        <h3>いい天気だし</h3>
+        <img
+          src="img/weather.JPG"
+          alt="mannga"
+          width="250px"
+          height="374px"
+          class="view"
+        />
+      </div>
+      <div class="m3 m">
+        <h3>出かけたい</h3>
+        <img src="img/map.JPG" alt="mannga" width="250px" height="374x" />
+      </div>
+      <div class="m4 m">
+        <h3>あった</h3>
+        <img src="img/ata.JPG" alt="mannga" width="250px" height="374px" />
+      </div>
+    </div>
+    <div class="areaplusanimation">
+      <div class="area">
+        <h3>探しましょう</h3>
+        <h4>23<br />areas</h4>
+
+        <div class="container" onscroll="checkFadeOut()">
+          <div class="label"><a href="#">北区</a></div>
+          <div class="label"><a href="#">港区</a></div>
+          <div class="label"><a href="#">文京区</a></div>
+          <div class="label"><a href="#">豊島区</a></div>
+          <div class="label"><a href="#">中央区</a></div>
+          <div class="label"><a href="#">台東区</a></div>
+          <div class="label"><a href="#">板橋区</a></div>
+          <div class="label"><a href="#">葛飾区</a></div>
+          <div class="label"><a href="#">足立区</a></div>
+          <div class="label"><a href="#">江東区</a></div>
+          <div class="label"><a href="#">荒川区</a></div>
+          <div class="label"><a href="#">目黒区</a></div>
+          <div class="label"><a href="AREA/nakano.html">中野区</a></div>
+          <div class="label"><a href="#">練馬区</a></div>
+          <div class="label"><a href="#">大田区</a></div>
+          <div class="label"><a href="#">墨田区</a></div>
+          <div class="label"><a href="#">渋谷区</a></div>
+          <div class="label"><a href="#">品川区</a></div>
+          <div class="label"><a href="#">新宿区</a></div>
+          <div class="label"><a href="#">杉並区</a></div>
+          <div class="label"><a href="#">世田谷区</a></div>
+          <div class="label"><a href="#">江户川区</a></div>
+          <div class="label"><a href="#">千代田区</a></div>
+        </div>
+
+        <!-- <button class="GO">GO<a href="/AREA/nakano.html"></a></button> -->
+      </div>
+      <div class="backgroundanimation">
+        <div class="right">
+          <img
+            src="img/leg.png"
+            alt="leg"
+            class="rotate-center"
+            width="150px"
+            height="150px"
+          />
+        </div>
+        <div class="left">
+          <img src="img/leg.png" alt="leg" width="150px" height="150px" />
+        </div>
+      </div>
+    </div>
+    <div class="up">
+      <div class="tg1"><h3>投稿大歓迎</h3></div>
+      <div class="upwhitebox">
+        <div class="tg2">
+          <h3>ニックネーム</h3>
+          <input type="text" placeholder="入力" />
+        </div>
+        <div class="tg3">
+          <h3>性別</h3>
+          <input type="text" placeholder="入力" />
+        </div>
+        <div class="tg4">
+          <h3>場所</h3>
+          <input type="text" placeholder="入力" />
+        </div>
+        <div class="tg5">
+          <h3>エピソード</h3>
+          <textarea placeholder="入力"></textarea>
+        </div>
+      </div>
+      <button class="tpbtn" onclick="showPopup()">投稿</button>
+      <div class="popup" id="popup">
+        <div class="popup-content">
+          投稿、ありがとうございます。
+          <button class="close" onclick="closePopup()">X</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="summer">
+        <h3>SOLOTORI</h3>
+        <div class="winter">
+          <p class="head">Fellow Us</p>
+          <div class="ig">
+            <a href="https://www.instagram.com/solotori_official/?hl=ja"
+              >Instagram</a
+            >
+            <a
+              href="https://www.facebook.com/100079183253142/posts/193386806644093/"
+              >Facebook</a
+            >
+          </div>
+
+          <p class="head">Contents</p>
+          <div class="us">
+            <a href="#">About us</a>
+            <a href="#">Map </a>
+            <a href="#">Contact us</a>
+          </div>
+        </div>
+        <div class="slider-container">
+          <div class="slider-right-left">
+            <span class="move">SOLOTORI COLORFUL YOUR TIME</span>
+          </div>
+          <div class="slider-left-right">
+            <span class="move">SOLOTORI COLORFUL YOUR TIME</span>
+          </div>
+        </div>
+      </div>
+      <p class="copy">&copy; 2023 MyWebsite. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

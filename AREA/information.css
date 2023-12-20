@@ -1,0 +1,198 @@
+:root {
+  --mainColor: #ef411b;
+  --backgroundColor: #fff8de;
+  --sctionColor: #fcdb30;
+  --scttion1Color: #2f5baf;
+  --scetionColor: #aae846;
+  --section1Color: #f78080;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  background-color: #fff8de;
+  /*display: flex;
+  flex-direction: column;
+  align-items: center; /* 在容器中垂直居中 
+  justify-content: center; /* 在容器中水平居中 
+  height: 100vh;:*/
+}
+div.logo {
+  background-color: #fefefe;
+  width: 375px;
+  height: 89px;
+}
+.nakano {
+  width: 376px;
+}
+h2.title {
+  font-family: 'Italiana', sans-serif;
+  font-size: 60px;
+  display: grid;
+  place-items: center;
+  width: 376px;
+}
+.text {
+  display: flex;
+  flex-direction: row;
+
+  position: relative;
+  top: 20px;
+  width: 250px;
+}
+.information1 {
+  position: relative; /* 父容器设*/
+}
+.information1,
+.information2,
+.information3 {
+  width: 376px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 60px;
+}
+.wrap img {
+  border: solid 0.1rem;
+}
+.wrap h3,
+.wrap p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 0.05rem;
+  font-family: 'SeoulNamsan Cl';
+}
+.wrap h3 {
+  width: 100px;
+  height: 50px;
+  border-top-left-radius: 15px;
+
+  position: absolute;
+  top: 30px;
+}
+
+.text p {
+  position: relative;
+  left: 102px;
+  width: 150px;
+  height: 60px;
+  border-top-left-radius: 15px;
+}
+
+.information1 h3,
+.information3 p {
+  background-color: var(--sctionColor);
+}
+.information2 h3,
+.information1 p {
+  background-color: var(--scttion1Color);
+}
+.information3 h3 {
+  background-color: var(--section1Color);
+}
+.information2 p {
+  background-color: #aae846;
+}
+
+.describe {
+  display: inline-block; /* 将span转换为块级元素 */
+  width: 252px;
+  margin: 10px 59px;
+}
+.back {
+  margin-top: 150px;
+  margin-left: 280px;
+  background-color: #fefefe;
+  width: 80px; /* 按钮的宽度 */
+  height: 80px; /* 按钮的高度，确保它和宽度相等，以实现圆形效果 */
+  border-radius: 50%;
+  border: solid 0.1rem;
+  transform: translate(-50%, -50%); /* 将圆的中心与父容器的中心对齐 */
+  animation: rotate 4s linear infinite; /* 运行名为 rotate 的动画，线性无限循环 */
+  cursor: pointer;
+}
+@keyframes rotate {
+  /* 使用 transform: rotate() 来实现旋转效果 */
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.back:hover {
+  animation-play-state: paused;
+}
+.slider-container span {
+  font-family: 'Italiana', sans-serif;
+  color: #fefefe;
+  font-size: 8rem;
+}
+/*animation*/
+
+footer {
+  margin-top: 100px;
+  width: 376px;
+  height: 800px;
+  background-color: var(--mainColor);
+  position: relative;
+  overflow: hidden;
+}
+
+footer h3 {
+  color: #fefefe;
+  font-size: 40px;
+  font-family: 'Italiana', sans-serif;
+  border-bottom: #fefefe solid 0.1rem;
+  padding-top: 20px;
+  padding-left: 40px;
+}
+footer p.head {
+  color: #fefefe;
+  font-family: 'Italiana', sans-serif;
+  opacity: 50%;
+}
+footer p.list {
+  color: #ffffff;
+}
+.winter {
+  padding-left: 40px;
+}
+.slider-container {
+  width: 300%;
+  overflow: hidden;
+  position: relative;
+}
+.slider-container.move {
+  font-size: 8rem;
+}
+
+.slider-right-left,
+.slider-left-right {
+  width: 200%; /* 两倍宽度，以便两个标题可以依次循环 */
+  animation: slide 10s linear infinite; /* 设置动画属性 */
+}
+
+.slider-right-left {
+  animation-direction: normal; /* 从左向右的动画 */
+}
+
+.slider-left-right {
+  animation-direction: reverse; /* 从右向左的动画 */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* 每次移动 50% 的宽度，以便循环 */
+  }
+}
+.copy {
+  color: #fefefe;
+  margin-top: 80px;
+  padding-left: 90px;
+  opacity: 50%;
+  font-size: 10px;
+}

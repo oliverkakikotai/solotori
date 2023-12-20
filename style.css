@@ -1,0 +1,631 @@
+:root {
+  --mainColor: #ef411b;
+  --backgroundColor: #fff8de;
+}
+
+.h1 {
+  font-size: 48px;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+
+  background-color: #fff8de;
+}
+
+div.logo {
+  background-color: #fefefe;
+  width: 375px;
+  height: 89px;
+}
+.street {
+  position: relative;
+  width: 376px;
+  height: 622px;
+}
+.back {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: 1;
+}
+.foreplay {
+  margin-top: 300px;
+  margin-left: 150px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: 2;
+  animation: sway 2s ease-in-out infinite;
+}
+@keyframes sway {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateX(0); /* 初始位置和结束位置 */
+  }
+  50% {
+    transform: translate(-50%, -50%) translateX(20px); /* 最大晃动距离，根据需要调整 */
+  }
+}
+.bob {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  top: 100px;
+  left: 30px;
+  background-color: #f78080;
+  border: solid 0.05rem;
+  border-top-right-radius: 15px;
+  text-align: center;
+  font-family: 'SeoulNamsan Cl';
+  z-index: 3;
+  animation: float 1s infinite alternate ease-in-out;
+}
+.bob::after {
+  content: '紅葉を探そう';
+  display: block;
+  position: absolute;
+  left: 60px;
+  background-color: #fcdb30;
+  width: 120px;
+  height: 30px;
+  border-top-left-radius: 15px;
+  border: solid 0.05rem;
+  animation: float 2s infinite alternate ease-in-out;
+}
+.bob::before {
+  content: 'アイスだ！';
+  display: block;
+  position: absolute;
+  top: 40px;
+  background-color: #2f5baf;
+  width: 120px;
+  height: 30px;
+  border-top-left-radius: 15px;
+  border: solid 0.05rem;
+  animation: float 3s infinite alternate ease-in-out;
+}
+.pop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  bottom: 100px;
+  right: 60px;
+  background-color: #f78080;
+  border: solid 0.05rem;
+  border-top-right-radius: 15px;
+  text-align: center;
+  z-index: 3;
+  animation: float 1s infinite alternate ease-in-out;
+}
+.pop::before {
+  content: '始めて！';
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 80px;
+  background-color: #fcdb30;
+  width: 120px;
+  height: 30px;
+  border-top-right-radius: 15px;
+  border: solid 0.05rem;
+  animation: float 2s infinite alternate ease-in-out;
+}
+.pop::after {
+  content: '遊ぼう！';
+  display: block;
+  position: absolute;
+  bottom: 80px;
+  right: 40px;
+  background-color: #aae846;
+  width: 120px;
+  height: 30px;
+  border-top-left-radius: 15px;
+  border: solid 0.05rem;
+}
+.aoa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 120px;
+  height: 30px;
+  bottom: 120px;
+  left: 60px;
+  background-color: #f78080;
+  border: solid 0.05rem;
+  border-top-right-radius: 15px;
+  text-align: center;
+  z-index: 3;
+  animation: float 2s infinite alternate ease-in-out;
+}
+.aoa::before {
+  content: 'wowoow！';
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  background-color: #aae846;
+  width: 120px;
+  height: 30px;
+  border-top-left-radius: 15px;
+  border: solid 0.05rem;
+  animation: float 3s infinite alternate ease-in-out;
+}
+.aoa::after {
+  content: 'what a nice weather';
+  display: block;
+  position: absolute;
+  bottom: 120px;
+  right: -40px;
+  background-color: #2f5baf;
+  width: 180px;
+  height: 30px;
+  border-top-left-radius: 15px;
+  border: solid 0.05rem;
+}
+@keyframes float {
+  to {
+    transform: translateY(5vh);
+  }
+}
+.catchcopy {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 360px;
+  position: relative;
+}
+.catch h1 {
+  font-family: 'Italiana', sans-serif;
+  font-size: 48px;
+  margin-top: 0;
+  margin-left: 10px;
+  position: absolute;
+}
+.catch2 h1 {
+  font-family: 'Italiana', sns-serif;
+  font-size: 130px;
+  margin-top: -40px;
+  margin-left: 60px;
+  position: relative;
+}
+
+.mannga,
+.area,
+.up {
+  display: grid;
+  place-items: center;
+}
+.mannga {
+  position: relative;
+  width: 370px;
+}
+.mannga img {
+  border: solid 0.1rem;
+}
+
+.mannga > div:not(.m1) img {
+  width: 100%;
+  display: block;
+  height: 0;
+
+  transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.mannga > div:not(.m1) .active {
+  height: 374px; /* 设置你想要展开的高度 */
+  opacity: 1;
+}
+view {
+  height: 374px; /* 展开高度 */
+  opacity: 1;
+}
+.mannga h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 0.1rem;
+  border-bottom: 0cm;
+  margin-bottom: 0%;
+  cursor: pointer;
+}
+
+.m1 h3 {
+  background-color: #fcdb30;
+  font-size: 15px;
+  width: 128px;
+  height: 40px;
+  border-top-right-radius: 15px;
+}
+.m2 {
+  width: 250px;
+  top: 370px;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: end;
+  animation: float 1s infinite alternate ease-in-out;
+}
+@keyframes float {
+  to {
+    transform: translateY(1vh);
+  }
+}
+.m2 h3 {
+  background-color: #f78080;
+  font-size: 15px;
+  width: 102px;
+  height: 40px;
+  margin-bottom: 0;
+  border-top-left-radius: 15px;
+  margin-left: 148px;
+  cursor: pointer;
+}
+.m3 {
+  width: 250px;
+  top: 400px;
+  animation: float 2s infinite alternate ease-in-out;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: end;
+}
+.m3 h3 {
+  background-color: #2f5baf;
+  font-size: 15px;
+  width: 128px;
+  height: 40px;
+  border-top-right-radius: 15px;
+}
+.m4 {
+  width: 250px;
+  top: 430px;
+
+  animation: float 3s infinite alternate ease-in-out;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: end;
+}
+.m4 h3 {
+  background-color: #aae846;
+  font-size: 15px;
+  width: 119px;
+  height: 40px;
+  border-top-left-radius: 15px;
+  margin-left: 131px;
+}
+@keyframes float {
+  to {
+    transform: translateY(2vh);
+  }
+}
+.area {
+  background-color: #fefefe;
+  width: 270px;
+  border-top-left-radius: 45px;
+  border: solid 0.1rem;
+  margin-top: 150px;
+  margin-left: 50px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  font-family: 'SeoulNamsan Cl';
+}
+.container {
+  height: 150px;
+  margin-bottom: 30px;
+  overflow-y: scroll;
+}
+.container::-webkit-scrollbar {
+  display: none; /* 隐藏滚动条 */
+}
+
+.label {
+  margin-bottom: 10px;
+  transition: font-size 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.label:first-child {
+  margin-top: 60px;
+}
+.label:last-child {
+  margin-bottom: 60px;
+}
+.labelsmall {
+  opacity: 0.5;
+  font-size: 1rem;
+}
+
+.labelbig {
+  font-size: 1.5rem;
+  opacity: 1;
+  margin: 20px 0;
+}
+a {
+  text-decoration: none;
+  color: #030303;
+  font-family: 'SeoulNamsan Cl';
+}
+/* lllllllllll */
+
+.area h3 {
+  font-size: 25px;
+}
+.area button {
+  border: none;
+  outline: none;
+  background-color: #fefefe;
+  font-size: 30px;
+  margin-top: 20px;
+  font-family: 'Italiana', sans-serif;
+}
+/*background*/
+.areaplusanimation {
+  position: relative;
+}
+.backgroundanimation {
+  width: 376px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  position: absolute;
+  z-index: 1;
+  top: 300px;
+  left: -50px;
+}
+.backgroundanimation img {
+  opacity: 60%;
+}
+.right img {
+  transform: scaleX(-1);
+  animation: rotateAnimation 5s linear infinite; /* 调整持续时间和其他参数 */
+  transform-origin: top right;
+}
+.left img {
+  position: relative;
+  right: -200px;
+  bottom: 20px;
+  animation: rotateAnimationFlipped 7s linear infinite; /* 调整持续时间和其他参数 */
+  transform-origin: top left;
+  transform: scaleX(-1);
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(50deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-50deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotateAnimationFlipped {
+  0%,
+  100% {
+    transform: rotate(0deg) scaleX(-1);
+  }
+  25% {
+    transform: rotate(20deg) scaleX(-1);
+  }
+  50% {
+    transform: rotate(0deg) scaleX(-1);
+  }
+  75% {
+    transform: rotate(-20deg) scaleX(-1);
+  }
+}
+/*投稿エリア*/
+.up {
+  margin-top: 100px;
+  width: 370px;
+}
+.tg1 {
+  font-family: 'SeoulNamsan Cl';
+  border-top-right-radius: 15px;
+  background-color: #f78080;
+  margin-right: 135px;
+  width: 134px;
+  height: 40px;
+  border: solid 0.1rem;
+  border-bottom: 0cap;
+  margin-bottom: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.upwhitebox {
+  width: 270px;
+  background-color: #fefefe;
+  border: solid 0.1rem;
+  height: 611px;
+}
+.tg2,
+.tg2,
+.tg3,
+.tg4 {
+  font-family: 'SeoulNamsan Cl';
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 40px;
+}
+.upwhitebox input {
+  border: 0cap;
+  width: 129px;
+  height: 40px;
+}
+.tg5 textarea {
+  width: 265px;
+  height: 439px;
+  border: 0cap;
+}
+.upwhitebox h3 {
+  background-color: #2f5baf;
+  width: 134px;
+  height: 39px;
+  border-top-right-radius: 15px;
+  border: solid 0.1rem;
+  border-left: 0cap;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tg3 h3 {
+  background-color: #aae846;
+}
+.tg4 h3 {
+  background-color: #fcdb30;
+}
+.tg5 h3 {
+  background-color: #f78080;
+}
+.tpbtn {
+  margin-top: 40px;
+  background-color: #fefefe;
+  border-top-left-radius: 15px;
+  width: 120px;
+  align-content: center;
+  letter-spacing: 5px;
+  transition: transform 0.3s ease;
+}
+.tpbtn:hover {
+  transform: translateY(-5px); /* 鼠标悬浮时按钮向上移动 5px，根据需要调整 */
+}
+
+.popup {
+  display: none;
+  /* 样式设置，比如位置、背景色等 */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  background-color: #fefefe;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+.close {
+  background-color: black;
+  color: #fefefe;
+  width: 20px; /* 按钮的宽度 */
+  height: 20px; /* 按钮的高度，确保它和宽度相等，以实现圆形效果 */
+  border-radius: 50%;
+  border: 0cap;
+  cursor: pointer;
+}
+.popup-content {
+  text-align: center;
+}
+
+.popup button {
+  margin-top: 10px;
+}
+footer {
+  margin-top: 100px;
+  width: 376px;
+  height: 800px;
+  background-color: var(--mainColor);
+  position: relative;
+  overflow: hidden;
+}
+
+footer h3 {
+  color: #fefefe;
+  font-size: 40px;
+  font-family: 'Italiana', sans-serif;
+  border-bottom: #fefefe solid 0.1rem;
+  padding-top: 20px;
+  padding-left: 40px;
+}
+footer p.head {
+  color: #fefefe;
+  font-family: 'Italiana', sans-serif;
+  opacity: 50%;
+}
+.ig a,
+.us a {
+  display: flex;
+  flex-direction: column;
+  color: #fefefe;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.ig a:hover,
+.us a:hover {
+  transform: translate(-10px, -10px); /* 鼠标悬停时向右上方移动10px */
+}
+footer p.list {
+  color: #ffffff;
+}
+.winter {
+  padding-left: 40px;
+}
+.slider-container span {
+  font-family: 'Italiana', sans-serif;
+  color: #fefefe;
+  font-size: 8rem;
+}
+/*animation*/
+.slider-container {
+  width: 300%;
+  overflow: hidden;
+  position: relative;
+}
+.slider-container.move {
+  font-size: 8rem;
+}
+
+.slider-right-left,
+.slider-left-right {
+  width: 200%; /* 两倍宽度，以便两个标题可以依次循环 */
+  animation: slide 10s linear infinite; /* 设置动画属性 */
+}
+
+.slider-right-left {
+  animation-direction: normal; /* 从左向右的动画 */
+}
+
+.slider-left-right {
+  animation-direction: reverse; /* 从右向左的动画 */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* 每次移动 50% 的宽度，以便循环 */
+  }
+}
+
+.copy {
+  color: #fefefe;
+  margin-top: 80px;
+  padding-left: 90px;
+  opacity: 50%;
+  font-size: 10px;
+}
