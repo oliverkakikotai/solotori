@@ -501,6 +501,7 @@ a {
   background-color: #f78080;
 }
 .tpbtn {
+  position: relative;
   margin-top: 40px;
   background-color: #fefefe;
   border-top-left-radius: 15px;
@@ -514,32 +515,89 @@ a {
 }
 
 .popup {
-  display: none;
-  /* 样式设置，比如位置、背景色等 */
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fefefe;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  /* display: non;
+  border: solid 0.1rem;
+  background-color: fefefe;
   position: fixed;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  padding: 20px;
-  background-color: #fefefe;
+
+  /* width: 300px;
+  padding: 20px; */
+  /* background-color: #fefefe;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
+  z-index: 9999; */
+}
+.popup.is-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
 }
 .close {
   background-color: black;
   color: #fefefe;
-  width: 20px; /* 按钮的宽度 */
-  height: 20px; /* 按钮的高度，确保它和宽度相等，以实现圆形效果 */
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: 0cap;
   cursor: pointer;
 }
 .popup-content {
-  text-align: center;
-}
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  top: 40%;
+  margin: 3em auto;
+  background: #fff;
+  border-top: 15px solid #97d7d9;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-40px);
+  -moz-transform: translateY(-40px);
+  -ms-transform: translateY(-40px);
+  -o-transform: translateY(-40px);
+  transform: translateY(-40px);
 
+  /* -webkit-backface-visibility: hidden; */
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.popup-container-content {
+  padding: 3em 3em 5em 3em;
+}
+.popup-content {
+  margin: 1.5em 0 0 0;
+  line-height: 1.5em;
+}
+.popup-container.popup-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  color: #183964;
+}
+.is-visble .popup-container {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 .popup button {
   margin-top: 10px;
 }

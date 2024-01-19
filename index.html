@@ -81,10 +81,10 @@
           <div class="label"><a href="AREA/nakano.html">中野区</a></div>
           <div class="label"><a href="#">練馬区</a></div>
           <div class="label"><a href="#">大田区</a></div>
-          <div class="label"><a href="#">墨田区</a></div>
+          <div class="label"><a href="AREA/motian.html">墨田区</a></div>
           <div class="label"><a href="#">渋谷区</a></div>
           <div class="label"><a href="#">品川区</a></div>
-          <div class="label"><a href="#">新宿区</a></div>
+          <div class="label"><a href="AREA/sinjyuku.html">新宿区</a></div>
           <div class="label"><a href="#">杉並区</a></div>
           <div class="label"><a href="#">世田谷区</a></div>
           <div class="label"><a href="#">江户川区</a></div>
@@ -130,9 +130,12 @@
       </div>
       <button class="tpbtn" onclick="showPopup()">投稿</button>
       <div class="popup" id="popup">
-        <div class="popup-content">
-          投稿、ありがとうございます。
-          <button class="close" onclick="closePopup()">X</button>
+        <div class="popup-container">
+          <div class="popup-content">
+            投稿、ありがとうございます。
+            <button class="close" onclick="closePopup()">X</button>
+          </div>
+          <a href="#0"><i class="fa fa-times-circle popup-close fa-2x"></i></a>
         </div>
       </div>
     </div>
@@ -159,6 +162,9 @@
             <a href="#">Contact us</a>
           </div>
         </div>
+        <a href="#0" class="popup-trigger icon-botton"
+          ><i class="fa fa-question-cricle fa-5x"></i
+        ></a>
         <div class="slider-container">
           <div class="slider-right-left">
             <span class="move">SOLOTORI COLORFUL YOUR TIME</span>

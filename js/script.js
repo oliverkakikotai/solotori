@@ -1,58 +1,4 @@
 'use strict';
-/*
-document.addEventListener("DOMContentLoaded", function () {
-  const mangaDivs = document.querySelectorAll(".mannga > div:not(.m1)");
-
-  mangaDivs.forEach((div) => {
-    const h3 = div.querySelector("h3");
-    const img = div.querySelector("img");
-
-    h3.addEventListener("click", function () {
-      mangaDivs.forEach((div) => {
-        if (div !== this.parentElement) {
-          div.querySelector("img").style.display = "none"; // 隐藏其他图片
-        }
-      });
-
-      if (img.style.display === "none") {
-        img.style.display = "block"; // 点击时显示对应图片
-      } else {
-        img.style.display = "none"; // 再次点击时隐藏图片
-      }
-    });
-  });
-});*/
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   const mangaDivs = document.querySelectorAll('.mannga > div:not(.m1)');
-
-//   mangaDivs.forEach((div) => {
-//     const h3 = div.querySelector('h3');
-//     const img = div.querySelector('img');
-
-//     h3.addEventListener('click', function () {
-//       mangaDivs.forEach((otherDiv) => {
-//         const otherImg = otherDiv.querySelector('img');
-//         if (otherDiv !== div) {
-//           otherImg.style.display = 'none'; // 隐藏其他图片
-//         }
-//       });
-//       img.classList.toggle('view');
-//       if (img.style.display === 'none') {
-//         img.style.display = 'block'; // 点击时显示对应图片
-//         img.style.opacity = '1'; // 将透明度设为 1
-//         img.style.transform = 'scale(1)'; // 放大图片
-//         img.style.height = '374px';
-//         img.style.transition = '2s ease-in-out';
-//       } else {
-//         img.style.display = 'none'; // 再次点击时隐藏图片
-//         img.style.opacity = '0'; // 将透明度设为 0
-//         img.style.transform = 'scale(0)'; // 缩小图片
-//         img.style.height = '0px';
-//       }
-//     });
-//   });
-// });
 
 document.addEventListener('DOMContentLoaded', function () {
   const mangaDivs = document.querySelectorAll('.mannga > div:not(.m1)');
@@ -80,25 +26,25 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-function showPopup() {
-  const popup = document.getElementById('popup');
-  popup.style.display = 'block'; // 显示弹窗
-}
+jQuery(document).ready(function ($) {
+  $('.pop-trigger').on('click', function (event) {
+    event.prevebtDefaoult();
+    $('.popup').addClass(is - visible);
+  });
 
-function closePopup() {
-  const popup = document.getElementById('popup');
-  popup.style.display = 'none'; // 关闭弹窗
-}
-// const mannga = document.querySelector('.mannga');
-// const mElements = document.querySelectorAll('.mannga .m');
+  $('.popup').on('click', function (event) {
+    if ($(event.target).is('.pop-close') || $(event.target).is('.popup')) {
+      event.preventDefault();
+      $(this).removeClass('is-visible');
+    }
+  });
 
-// mElements.forEach((m) => {
-//   m.addEventListener('click', function fn(e) {
-//     console.log(m.querySelector('img'));
-
-//     m.classList.toggle('view');
-//   });
-// });
+  $(document).keyup(function (event) {
+    if (event.which == '27') {
+      $('.popup').removeClass('.is-visiable');
+    }
+  });
+});
 
 const container = document.querySelector('.container');
 const labels = document.querySelectorAll('.label');

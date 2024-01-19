@@ -1,0 +1,234 @@
+:root {
+  --mainColor: #ef411b;
+  --backgroundColor: #fff8de;
+  --sctionColor: #fcdb30;
+  --scttion1Color: #2f5baf;
+  --scetionColor: #aae846;
+  --section1Color: #f78080;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  background-color: #fff8de;
+}
+
+div.logo {
+  background-color: #fefefe;
+  width: 375px;
+  height: 89px;
+}
+h2.title {
+  font-family: 'Italiana', sans-serif;
+  font-size: 60px;
+  display: grid;
+  place-items: center;
+  width: 376px;
+}
+.mannga,
+.area {
+  display: grid;
+  place-items: center;
+  width: 376px;
+}
+
+.mannga img {
+  border: solid 0.1rem;
+}
+.mannga h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0cm;
+  margin-bottom: 0%;
+  border: solid 0.1rem;
+  border-bottom: 0cap;
+  width: 128px;
+  height: 40px;
+}
+.m1 h3 {
+  background-color: #fcdb30;
+  font-size: 15px;
+
+  border-top-right-radius: 15px;
+}
+.m2 h3 {
+  background-color: #2f5baf;
+  font-size: 15px;
+
+  border-top-left-radius: 15px;
+  margin-left: 122px;
+}
+.m3 h3 {
+  background-color: #f78080;
+
+  border-top-right-radius: 15px;
+}
+.m4 h3 {
+  background-color: #aae846;
+  border-top-left-radius: 15px;
+  margin-left: 122px;
+  margin-top: 20px;
+}
+.information,
+.like {
+  background-color: #fefefe;
+  border-radius: 15px;
+  border: solid 0.1rem;
+  width: 120px;
+
+  margin-top: 20px;
+  margin-left: 120px;
+  cursor: pointer;
+}
+.like {
+  margin-left: -150px;
+}
+.area {
+  background-color: #fefefe;
+  width: 270px;
+  border-top-left-radius: 45px;
+  border: solid 0.1rem;
+  margin-left: 50px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.area button {
+  border: none;
+  outline: none;
+  background-color: #fefefe;
+  font-size: 30px;
+
+  font-family: 'Italiana', sans-serif;
+}
+
+.container {
+  height: 150px;
+  overflow-y: scroll;
+}
+.container::-webkit-scrollbar {
+  display: none; /* 隐藏滚动条 */
+}
+
+.label {
+  margin-bottom: 10px;
+  transition: font-size 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.label:first-child {
+  margin-top: 60px;
+}
+.label:last-child {
+  margin-bottom: 60px;
+}
+.labelsmall {
+  opacity: 0.5;
+  font-size: 0.6rem;
+}
+
+.labelbig {
+  font-size: 1rem;
+  opacity: 1;
+}
+a {
+  text-decoration: none;
+  color: #030303;
+  font-family: 'SeoulNamsan Cl';
+}
+.back {
+  margin-top: 150px;
+  margin-left: 280px;
+  background-color: #fefefe;
+  width: 80px; /* 按钮的宽度 */
+  height: 80px; /* 按钮的高度，确保它和宽度相等，以实现圆形效果 */
+  border-radius: 50%;
+  border: solid 0.1rem;
+  transform: translate(-50%, -50%); /* 将圆的中心与父容器的中心对齐 */
+  animation: rotate 4s linear infinite; /* 运行名为 rotate 的动画，线性无限循环 */
+  cursor: pointer;
+}
+@keyframes rotate {
+  /* 使用 transform: rotate() 来实现旋转效果 */
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.back:hover {
+  animation-play-state: paused;
+}
+footer {
+  margin-top: 100px;
+  width: 376px;
+  height: 800px;
+  background-color: var(--mainColor);
+  position: relative;
+  overflow: hidden;
+}
+footer h3 {
+  color: #fefefe;
+  font-size: 40px;
+  font-family: 'Italiana', sans-serif;
+  border-bottom: #fefefe solid 0.1rem;
+  padding-top: 20px;
+  padding-left: 40px;
+}
+footer p.head {
+  color: #fefefe;
+  font-family: 'Italiana', sans-serif;
+  opacity: 50%;
+}
+footer p.list {
+  color: #ffffff;
+}
+
+.winter {
+  padding-left: 40px;
+}
+.slider-container span {
+  font-family: 'Italiana', sans-serif;
+  color: #fefefe;
+  font-size: 8rem;
+}
+/*animation*/
+.slider-container {
+  width: 300%;
+  overflow: hidden;
+  position: relative;
+}
+.slider-container.move {
+  font-size: 8rem;
+}
+
+.slider-right-left,
+.slider-left-right {
+  width: 200%; /* 两倍宽度，以便两个标题可以依次循环 */
+  animation: slide 10s linear infinite; /* 设置动画属性 */
+}
+
+.slider-right-left {
+  animation-direction: normal; /* 从左向右的动画 */
+}
+
+.slider-left-right {
+  animation-direction: reverse; /* 从右向左的动画 */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* 每次移动 50% 的宽度，以便循环 */
+  }
+}
+
+.copy {
+  color: #fefefe;
+  margin-top: 80px;
+  padding-left: 90px;
+  opacity: 50%;
+  font-size: 10px;
+}
