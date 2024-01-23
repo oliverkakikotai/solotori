@@ -72,6 +72,8 @@ h2.title {
 }
 
 .text p {
+  font-size: 0.7rem;
+  font-weight: bold;
   position: relative;
   left: 102px;
   width: 150px;

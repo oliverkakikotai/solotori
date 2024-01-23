@@ -10,6 +10,12 @@
       href="https://fonts.googleapis.com/css2?family=Italiana&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="js/script.js" defer></script>
     <title>Document</title>
   </head>
@@ -69,7 +75,7 @@
           <div class="label"><a href="#">北区</a></div>
           <div class="label"><a href="#">港区</a></div>
           <div class="label"><a href="#">文京区</a></div>
-          <div class="label"><a href="#">豊島区</a></div>
+          <div class="label"><a href="AREA/motian.html">豊島区</a></div>
           <div class="label"><a href="#">中央区</a></div>
           <div class="label"><a href="#">台東区</a></div>
           <div class="label"><a href="#">板橋区</a></div>
@@ -81,7 +87,7 @@
           <div class="label"><a href="AREA/nakano.html">中野区</a></div>
           <div class="label"><a href="#">練馬区</a></div>
           <div class="label"><a href="#">大田区</a></div>
-          <div class="label"><a href="AREA/motian.html">墨田区</a></div>
+          <div class="label"><a href="#">墨田区</a></div>
           <div class="label"><a href="#">渋谷区</a></div>
           <div class="label"><a href="#">品川区</a></div>
           <div class="label"><a href="AREA/sinjyuku.html">新宿区</a></div>
@@ -128,15 +134,13 @@
           <textarea placeholder="入力"></textarea>
         </div>
       </div>
-      <button class="tpbtn" onclick="showPopup()">投稿</button>
+      <button class="tpbtn">投稿</button>
       <div class="popup" id="popup">
-        <div class="popup-container">
-          <div class="popup-content">
-            投稿、ありがとうございます。
-            <button class="close" onclick="closePopup()">X</button>
-          </div>
-          <a href="#0"><i class="fa fa-times-circle popup-close fa-2x"></i></a>
+        <div class="popup-content">
+          投稿、ありがとうございます。
+          <button class="close">X</button>
         </div>
+        <a href="#0"><i class="fa fa-times-circle popup-close fa-2x"></i></a>
       </div>
     </div>
 

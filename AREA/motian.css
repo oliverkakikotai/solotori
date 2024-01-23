@@ -43,7 +43,7 @@ h2.title {
   margin-bottom: 0%;
   border: solid 0.1rem;
   border-bottom: 0cap;
-  width: 128px;
+  width: 150px;
   height: 40px;
 }
 .m1 h3 {
@@ -57,7 +57,7 @@ h2.title {
   font-size: 15px;
 
   border-top-left-radius: 15px;
-  margin-left: 122px;
+  margin-left: 200px;
 }
 .m3 h3 {
   background-color: #f78080;
@@ -67,7 +67,7 @@ h2.title {
 .m4 h3 {
   background-color: #aae846;
   border-top-left-radius: 15px;
-  margin-left: 122px;
+  margin-left: 200px;
   margin-top: 20px;
 }
 .information,
