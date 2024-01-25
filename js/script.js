@@ -52,14 +52,38 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-const tpbtn = document.querySelector(`.tpbtn`);
-tpbtn.addEventListener(`click`, function () {
-  const popup = document.querySelector(`.popup`);
-  popup.style.visibility = `unset`;
-  document.querySelector(`.close`).addEventListener(`click`, () => {
-    popup.style.visibility = `hidden`;
+const inputs = document.querySelectorAll('input');
+const area = document.querySelector('textarea');
+const tpbtn = document.querySelector('.tpbtn');
+tpbtn.addEventListener('click', function () {
+  // Clear input values
+  inputs.forEach((input) => {
+    input.value = '';
+  });
+  area.value = '';
+
+  // Show the popup
+  const popup = document.querySelector('.popup');
+  popup.style.visibility = 'unset';
+
+  // Add close event listener to the close button
+  document.querySelector('.close').addEventListener('click', () => {
+    popup.style.visibility = 'hidden';
   });
 });
+// const reset = document.querySelectorAll('input').reset();
+// console.log(input);
+
+// const tpbtn = () => document.querySelector(`.tpbtn`);
+// tpbtn.addEventListener(`click`, function () {
+//   const popup = document.querySelector(`.popup`);
+//   popup.style.visibility = `unset`;
+//   document.querySelector(`.close`).addEventListener(`click`, () => {
+//     popup.style.visibility = `hidden`;
+//   });
+//   reset();
+//   // tpbtn.innerHTML = '';
+// });
 
 // const tpbtn = document.querySelector('.tpbtn');
 // tpbtn.addEventListener('click', function () {
